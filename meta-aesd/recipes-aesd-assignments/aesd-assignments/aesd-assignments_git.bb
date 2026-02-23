@@ -9,8 +9,13 @@ PV = "1.0+git${SRCPV}"
 
 # --- YOU MUST SET THESE TWO ---
 # Prefer https to avoid ssh-agent complexity during bitbake fetch
-SRC_URI = "https://github.com/cu-ecen-aeld/assignments-3-and-later-madhavsanj.git"
-SRCREV = "<1a5b5d1f78ba5b63a67a10bed26a7e1cb48f0954>"
+SRC_URI = "git@github.com:cu-ecen-aeld/assignments-3-and-later-madhavsanj.git"
+
+SRC_URI = "git://github.com/cu-ecen-aeld/assignments-3-and-later-madhavsanj.git;protocol=https;branch=main \
+           file://aesdsocket-init \
+          "
+SRCREV = "1a5b5d1f78ba5b63a67a10bed26a7e1cb48f0954"
+
 # -----------------------------
 
 # Fetches into ${WORKDIR}/git; build from server/ inside your repo
