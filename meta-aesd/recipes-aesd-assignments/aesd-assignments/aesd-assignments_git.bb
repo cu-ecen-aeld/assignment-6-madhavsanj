@@ -14,7 +14,8 @@ SRC_URI = "git@github.com:cu-ecen-aeld/assignments-3-and-later-madhavsanj.git"
 SRC_URI = "git://github.com/cu-ecen-aeld/assignments-3-and-later-madhavsanj.git;protocol=https;branch=main \
            file://aesdsocket-init \
           "
-SRCREV = "1a5b5d1f78ba5b63a67a10bed26a7e1cb48f0954"
+SRCREV = "da303aae5837a439637c4703461787272adeed78"
+
 
 # -----------------------------
 
