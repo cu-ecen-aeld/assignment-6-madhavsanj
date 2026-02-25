@@ -8,6 +8,7 @@ on:
 jobs:
       full-test:
         runs-on: self-hosted
+        timeout-minutes: 720
         steps:
           - uses: actions/checkout@v3
             with:
@@ -17,7 +18,7 @@ jobs:
             with:
                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           - name: Run build
-            #timeout-minutes: 600
+            timeout-minutes: 600
             run: |
                docker run --rm \
                  -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent \
